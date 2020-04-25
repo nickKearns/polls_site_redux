@@ -1,0 +1,19 @@
+{% if request.user.is_authenticated %}
+    <p>
+        Hello, {{ request.user.username }}!
+    </p>
+    {% else %}
+        <a href="/registration/signup">Sign Up</a>
+{% endif %}
+
+<p align="right">
+    <a href="/accounts/login">Login</a>
+    <a href="/accounts/logout">Logout</a>
+  </p>
+  
+  {% block content %}
+  <p>
+      This is a placeholder block.
+  </p>
+  {% endblock %}
+  
